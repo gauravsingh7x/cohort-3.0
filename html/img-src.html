@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Basic image — alt is mandatory</h3>
+    <!-- Basic image — alt is mandatory -->
+        <img src="images/photo.jpg" alt="A developer coding at a desk">
+<br><br>
+    <h3>Decorative image — empty alt, screen reader skips it</h3>
+    <!-- Decorative image — empty alt, screen reader skips it -->
+        <img src="images/photo.jpg" alt="">
+<br><br>
+    <h3>Responsive image — different sizes for different screens</h3>
+    <!-- Responsive image — different sizes for different screens -->
+        <img
+            src="images/photo.jpg"
+            srcset="photo-400.jpg 400w, photo-800.jpg 800w, photo-1200.jpg 1200w"
+            sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px"
+            alt="Description"
+            width="800"
+            height="600"
+            loading="lazy"
+        >
+<br><br>
+    <h3>Modern formats with fallback</h3>
+    <!-- Modern formats with fallback -->
+        <picture>
+            <source srcset="photo.avif" type="image/avif">
+            <source srcset="photo.webp" type="image/webp">
+            <img src="images/photo.jpg" alt="Description" width="800" height="600">
+        </picture>
+<br><br>
+    <h3>Figure with caption</h3>
+    <!-- Figure with caption -->
+        <figure>
+            <img src="images/photo.jpg" alt="Bar chart showing monthly sales data">
+            <figcaption>Monthly sales for Q3 2025. Data from internal CRM.</figcaption>
+        </figure>
+
+</body>
+</html>

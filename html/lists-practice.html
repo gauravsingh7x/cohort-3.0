@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists and Nested Lists </title>
+
+    <style>
+        .main{
+            width: auto;
+            height: auto;
+        }
+        #parent-row-1{
+            height: 500px;
+        }
+        #olCol{
+            width: 33%;
+            height: auto;
+            border: 1px solid;
+            background-color: aqua;
+            float: left;
+        }
+        #ulCol{
+            width: 33%;
+            height: auto;
+            border: 1px solid;
+            background-color: blue;
+            float: left;
+        }
+        #dlCol{
+            width: 33%;
+            height: auto;
+            border: 1px solid;
+            background-color: green;
+            float:left;
+        }
+
+
+        #parent-row-2{
+            height: auto;
+            background-color: yellow;
+        }
+        #test1Col{
+            width: 49.5%;
+            height: 100px;
+            border: 1px solid;
+            background-color: yellow;
+            float:right;
+        } 
+        #test2Col{
+            width: 49.5%;
+            height: 100px;
+            border: 1px solid;
+            background-color: green;
+            float:left;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+<div class="main" title="List Container">
+    <div id="parent-row-1" title="Row One">
+        <div id="olCol" title="Ordered List">
+            <!--by default > numbering-->
+            <ol title="Ordered List">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Cat</li>
+                   <ol type="A" title="Ordered List">
+                        <li>Apple</li>
+                        <li>Banana</li>
+                        <li>Cat</li>
+                            <ul type="circle" title="Unordered List">
+                                <li>Apple</li>
+                                    <ol type="i" title="Ordered List">
+                                        <li>Apple</li>
+                                        <li>Banana</li>                                   
+                                        <li>Elephant</li>
+                                    </ol>
+                                <li>Banana</li>
+                                <li>Cat</li>
+                                   <ol type="i" start="3" title="Ordered List">
+                                        <li>Cat</li>
+                                        <li>Dog</li>
+                                        <li>Elephant</li>
+                                    </ol>
+                                <li>Dog</li>
+                                <li>Elephant</li>
+                            </ul>
+                        <li>Dog</li>
+                        <li>Elephant</li>
+                    </ol>
+                <li>Dog</li>
+                <li>Elephant</li>
+            </ol>
+
+            <ol type="a"start="2" title="Ordered List">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Cat</li>
+                <li>Dog</li>
+                <li>Elephant</li>
+            </ol>
+
+            <ol type="A" reversed title="Ordered List">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Cat</li>
+                <li>Dog</li>
+                <li>Elephant</li>
+            </ol>
+
+            <ol type="i" title="Ordered List">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Dog</li>
+                <li>Elephant</li>
+            </ol>
+
+            <ol type="I" title="Ordered List">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Cat</li>
+            </ol>
+
+        </div>
+
+        <div id="ulCol" title="Unordered List">
+            <!--by default > dotted/disc-->
+            <ul title="Unordered List">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Cat</li>
+                <li>Dog</li>
+                <li>Elephant</li>
+            </ul>
+
+            <ul type="circle" title="Unordered List">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Cat</li>
+                <li>Dog</li>
+                <li>Elephant</li>
+            </ul>
+
+            <ul type="square" title="Unordered List">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Cat</li>
+                <li>Dog</li>
+                <li>Elephant</li>
+            </ul>
+
+            <ul type="none" title="Unordered List">
+                <li>Apple</li>
+                <li>Banana</li>
+                             <ul type="square" title="Unordered List">
+                                <li>Apple</li>
+                                <li>Banana</li>
+                                <li>Cat</li>
+                                <li>Dog</li>
+                                    <ul type="disc" title="Unordered List">
+                                        <li>Apple</li>
+                                        <li>Banana</li>                                   
+                                            <ol title="Ordered List">
+                                                <li>Apple</li>
+                                                <li>Banana</li>
+                                                <li>Cat</li>
+                                                <li>Elephant</li>
+                                            </ol>
+                                        <li>Elephant</li>
+                                    </ul>
+                                <li>Elephant</li>
+                            </ul>
+                <li>Cat</li>
+                <li>Dog</li>
+                <li>Elephant</li>
+            </ul>
+
+            <ul title="Unordered List">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Cat</li>
+                <li>Dog</li>
+                <li>Elephant</li>
+            </ul>
+        </div>
+
+        <div id="dlCol" title="Desciptive List">
+            <dl title="Desciptive List">
+                <dt>HTML</dt>
+                    <dd>Hypertext Markuep Language</dd>
+                <dt>CSS</dt>
+                    <dd>Cascading Style Sheets</dd>
+                <dt>JS</dt>
+                    <dd>JavaScript</dd>
+                </dl>
+        </div>
+    </div>
+
+
+    <div id="parent-row-2" title="Test Container">
+        <div id="test1Col" title="test1">
+         <p>An &lt;input&gt; element with pre-defined values in a &lt;datalist&gt;</p>   
+            <input list="browsers">
+            <datalist id="browsers">
+                    <option value="Internet Explorer">
+                    <option value="Firefox">
+                    <option value="Google Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+            </datalist>
+        </div>
+        <div id="test2Col" title="test2">Test Two</div>
+    </div>
+
+</div>
+</body>
+</html>

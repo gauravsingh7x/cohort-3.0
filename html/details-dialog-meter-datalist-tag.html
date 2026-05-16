@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Less Know but Useful Tags</title>
+</head>
+
+<body>
+<br>
+    <!-- details/summary — native accordion, no JavaScript needed -->
+    <details>
+        <summary>Click to expand this section</summary>
+        <p>This content is hidden by default and revealed on click.
+            Google indexes both open and closed content.</p>
+    </details>
+<br>
+<br>
+    <!-- dialog — native modal dialog -->
+    <dialog id="my-modal">
+        <h2>Are you sure?</h2>
+        <p>This action cannot be undone.</p>
+        <button onclick="document.getElementById('my-modal').close()">Cancel</button>
+        <button>Confirm</button>
+    </dialog>
+    <button onclick="document.getElementById('my-modal').showModal()">Open modal</button>
+<br>
+<br>
+    <!-- progress — native progress bar -->
+    <label for="upload">Upload progress:</label>
+    <progress id="upload" value="65" max="100">65%</progress>
+<br>
+<br>
+    <!-- meter — a measurement within a known range -->
+    <label for="disk">Disk usage:</label>
+    <meter id="disk" value="6" min="0" max="10" low="3" high="8" optimum="2">6GB</meter>
+<br>
+<br>
+    <!-- datalist — searchable dropdown suggestions -->
+    <input list="cities" name="city" placeholder="Type a city...">
+    <datalist id="cities">
+        <option value="Mumbai">
+        <option value="Delhi">
+        <option value="Bangalore">
+        <option value="Chennai">
+        <option value="Hyderabad">
+    </datalist>
+<br>
+<br>
+    <!-- output — result of a calculation -->
+    <form oninput="result.value = parseInt(a.value) + parseInt(b.value)">
+        <fieldset style="display: inline;">
+            <legend>output — result of a calculation in form</legend>
+            <input type="number" id="a" value="10"> +
+            <input type="number" id="b" value="20"> =
+            <output name="result">30</output>
+        </fieldset>
+    </form>
+<br>
+<br>
+    <!-- template — inert HTML fragment, used by JavaScript -->
+    <template id="card-template">
+        <div class="card">
+            <h3 class="card-title"></h3>
+            <p class="card-body"></p>
+        </div>
+    </template>
+<br>
+<br>
+    <!-- ruby — East Asian text annotation (pronunciation guides) -->
+    <ruby>
+        漢 <rt>かん</rt>
+        字 <rt>じ</rt>
+    </ruby>
+
+    <!-- bdi — isolates text direction (for user-generated content mixing RTL/LTR) -->
+    <p>User <bdi>مرحبا</bdi> posted 15 times.</p>
+<br>
+<br>
+    <!-- wbr — word break opportunity (for long URLs or compound words) -->
+    <p>This is a very long URL: https://example.com/very<wbr>/long<wbr>/path<wbr>/here</p>
+
+
+</body>
+</html>

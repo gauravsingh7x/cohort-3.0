@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formatting Tags</title>
+
+    <style>
+        .outlined{
+            border: solid 1px green;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<!--bgcolor: Sets the background color of the scrolling area.
+    direction: Sets the movement direction. Values: left (default), right, up, down.
+    behavior="scroll/slide/alternate"
+    scrollamount: Sets the speed of the scroll (higher numbers are faster)
+    scrolldelay: Sets the delay between each scroll movement in milliseconds.
+    loop: Specifies how many times the marquee should scroll (use infinite for continuous)
+    onmouseover="this.stop();" onmouseout="this.start();"-->
+    <marquee
+        bgcolor="yellow"
+        direction="left"
+        height="50"
+        behavior="alternate"
+        hspace="50"
+        vspace="50"
+        class="outlined">Text Formmatting</marquee>
+
+<!--for styling > <tagname style="property:value;">-->
+<hr>
+    <section>
+        <h4>Frequntly asked questions</h4>
+        <details>
+            <summary>What is Your Name</summary>
+            <p>My Name is  Gauran Singh</p>
+        </details>
+    </section>
+
+    <hr>
+
+    <p>&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;: Headings.</p>
+    <h1> h1  </h1>
+    <h2> h2 </h2>
+    <h3> h3 </h3>
+    <h4> h4 </h4>
+    <h5> h5 </h5>
+    <h6> h6 </h6>
+    <p> h1 defines the most <mark>important heading.</mark> h6 defines the <mark>least important heading.</mark></p>
+
+    <hr>
+
+        &lt;b&gt;<b title="This text is bold"> - Bold text </b>
+    <br>
+        &lt;strong&gt;<strong title="This text is important!"> - Important text</strong>
+    <br>
+       &lt;u&gt; - <u title="This text is bold">Underline text </u>
+    <br>
+        &lt;i&gt;<i title="Tip: The <i> tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc."> - Italic text</i>
+    <br>
+        &lt;em&gt;<em title="The HTML <em> element defines emphasized text. The content inside is typically displayed in italic.
+                            Tip: A screen reader will pronounce the words in <em> with an emphasis, using verbal stress."> - Emphasized text</em>
+    <br>
+        &lt;mark&gt; - <mark title="defines text that should be marked or highlighted:">Marked text</mark>
+    <br>
+        &lt;small&gt;<small title="The HTML <small> element defines smaller text:"> - decrease text size</small>
+    <br>
+        &lt;big&gt;<big title=""> - Increase text size</small>
+    <br>
+    <br>
+        &lt;strike&gt; - <strike title="renders text with a horizontal line through it, indicating deleted or inaccurate content.">applies strike through</strike> Not Supported in HTML5 according to w3schools.
+    <br>
+        &lt;s&gt; - <s title="Used for text that is no longer accurate or relevant.">Used for text that is no longer accurate or relevant.</s>
+    <br>
+        <p><s>Only 50 tickets left!</s></p>
+        <p>SOLD OUT!</p>
+    <br>
+        &lt;del&gt; - <del title="The HTML <del> element defines text that has been deleted from a document. Browsers will usually strike a line through deleted text:">Deleted Text</del> and insert <ins title="The HTML <ins> element defines a text that has been inserted into a document. Browsers will usually underline inserted text:">New Text </ins> with help of &lt;ins&gt; tag 
+    <br>
+        &lt;del&gt; another example - My favorite color is <del>blue</del> <ins>red</ins>
+    <br><br>
+        &lt;sup&gt; - Superscript textt like (a+b)<sup>2</sup>=a<sup>2</sup>+b<sup>2</sup>+2ab
+    <br>
+        &lt;sub&gt; - Subscript text like H<sub>2</sub>SO<sub>4</sub>
+    <br><br>
+    <!--Bidirectional Override) tag forces a specific text direction (left-to-right or right-to-left), overriding the default browser behavior.
+    It requires the dir attribute (ltr or rtl) to function, making it essential for managing mixed-language content like Arabic or Hebrew within a document-->
+        &lt;bdo&gt; - Bidirectional Override  <bdo dir="rtl">Hello</bdo>
+    <hr>
+    <!--<kbd> tag is an HTML element used to define keyboard input, <kbd> is specifically for input
+        Define some text as keyboard input in a document:-->
+        &lt;kbd&gt; - <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text (Windows).</p>
+                    <p>Press <kbd>Cmd</kbd> + <kbd>C</kbd> to copy text (Mac OS).</p>
+    <hr>
+    <!--The <samp> tag is used to define sample output from a computer program. The content inside is displayed in the browser's default monospace font.-->
+        &lt;samp&gt;
+        <p>Message from my computer:</p>
+        <p><samp>File not found.<br>Press F1 to continue</samp></p>
+    <hr>
+        <p>&lt;var&gt; - The var element</p>
+        <!--The <var> tag is used to define a variable in programming or in a mathematical expression. The content inside is typically displayed in italic.-->
+        <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
+    <hr>
+        <p>&lt;code&gt; -The code element</p>
+        <p title="Define some text as computer code in a document:">The HTML <code>button</code> tag defines a clickable button.</p>
+
+        <p title="The <code> tag is used to define a piece of computer code. The content inside is displayed in the browser's default monospace font. ">The CSS <code>background-color</code> property defines the background color of an element.</p>
+
+
+    <hr>
+
+    <p title="Marking abbreviations can give useful information to browsers, translation systems and search-engines.">&lt;abbr&gt; - The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+    <p>&lt;q&gt; - Browsers usually insert quotation marks around the q element. exapmle below</p>
+    <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+
+
+    <p>&lt;blockquote&gt; - Here is a quote from WWF's website:</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
+    </blockquote>
+
+    &lt;address&gt;
+    <address title="The HTML <address> tag defines the contact information for the author/owner of a document or an article.
+                    The contact information can be an email address, URL, physical address, phone number, social media handle, etc.
+                    The text in the <address> element usually renders in italic, and browsers will always add a line break before and after the <address> element.">
+                    Written by John Doe.<br>
+                    Visit us at:<br>
+                    Example.com<br>
+                    Box 564, Disneyland<br>
+                    USA
+    </address>
+<hr>
+
+
+    <dl title="Entity names or entity numbers can be used to display reserved HTML characters.">
+        <dt title="&entity_name; OR &#entity_number; ">Character Entity</dt>
+        <dd>(less than) &lt; or &#60;</dd>
+        <dd>(greater than) &gt; or &#62;</dd>
+        <dd>A commonly used HTML entity is the non-breaking space: &nbsp;</dd>
+        <dd>ampersand &amp; or	&#38;</dd>
+        <dd>registered trademark &reg; or &#174;</dd>
+        <dd>trademark &trade; or &#8482;</dd>
+        <dd>copyright	&copy; or &#169;</dd>
+        <dd>single quotation mark 	&apos; or &#39;</dd>
+        <dd>cent &cent; or &#162;</dd>
+        <dd>pound &pound; or &#163;</dd>
+        <dd>yen &yen; or &#165;</dd>
+        <dd>euro &euro; or &#8364;</dd>   
+    </dl>
+
+
+
+
+    <hr>
+
+    <p>&lt;p&gt;: Paragraph.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque accusamus, a ratione consequatur et laboriosam quos cupiditate dolorem vero culpa exercitationem id, harum modi eaque saepe tempore dolore quas quo!
+    Odio laboriosam quasi, veritatis, a aliquid perspiciatis dolorum tenetur ab dolore eveniet magni cumque, exercitationem doloremque nemo id vero voluptatibus maiores! Distinctio obcaecati blanditiis ad cum iusto nemo corrupti! Magnam!
+    Beatae, nisi enim. Ab, neque quidem. Inventore neque sit earum praesentium deleniti quis magni. Quod illum suscipit labore mollitia, perferendis totam consectetur! Deserunt fuga accusantium earum assumenda sed quis! Officiis.
+    Eum, repudiandae. Repellat libero dolor iste eius explicabo hic exercitationem soluta temporibus iure eveniet, minus quos nobis quia magni nihil mollitia velit! Eligendi sed ipsa iure porro velit odit unde.
+    Saepe, sit. Maiores quaerat eos impedit ipsam, consequatur soluta ad fugit ut voluptates nihil sint voluptatibus nostrum fugiat accusamus cumque libero quidem temporibus animi asperiores aspernatur quia? Aliquid, fugiat eaque!
+    Vitae, at impedit? Expedita, excepturi enim cumque dolorum, explicabo earum beatae voluptates libero quam, quo nulla quos odio aperiam minus ipsum! Illum iusto amet ab alias commodi numquam pariatur obcaecati.
+    Non placeat explicabo expedita, exercitationem soluta minus dolorum possimus iusto neque ratione corporis architecto rem magni nam vero illo delectus dolor magnam nemo accusantium illum voluptatum! Illum similique distinctio explicabo!
+    Neque, sequi unde! Eveniet, quas corrupti. Dolor deleniti aut sunt perspiciatis tempora tempore. Illo, rem. Quibusdam fugiat qui consequuntur hic nam sapiente possimus debitis? Ratione praesentium corporis harum delectus eveniet!
+    Eaque corrupti laborum neque in. Eaque laudantium aliquam exercitationem minus libero, dolorum quidem non dolor eius nam, odit explicabo! Distinctio, in neque obcaecati eum dolorum ad culpa at omnis reprehenderit?
+    Minima explicabo earum esse, incidunt inventore id enim voluptas eius, veritatis quo adipisci alias amet ipsam repellat doloremque eveniet dignissimos molestiae neque quasi quisquam praesentium qui iusto vel hic? Corrupti!
+    </p>
+    
+    <hr>
+
+    <p>&lt;pre&gt;: maintian whitespace and line breaks</p>
+
+    <pre>
+        To,
+            The principal,
+            (School name),
+            (School address),
+            City.
+                                            Subject: Application for Two days’ leave.
+
+            Dear Sir/Madam,
+                With due respect, I want to state that I am a student of Class 5th (say) in your school.
+            I have an emergency because I need to leave the town and stay out of the station for two days, i.e., 8th, June 2021 and 9th, June 2021 (say).
+            So I will not be able to attend any classes during that period, and hence, I want to apply for leave for these two days.
+            All my work is up to date, and I will cover the rest after returning.
+            
+            Kindly grant me leave for two days ( 8th, June 2021 & 9th, June 2021). It will be really helpful to me.
+            Thank you in advance for your consideration and cooperation in this matter.
+
+            Thanking you,
+
+            Yours Sincerly,
+            (Name)
+            (Class)
+            (Roll no.)
+            (Date)
+    </pre>
+
+
+
+</body>
+</html>

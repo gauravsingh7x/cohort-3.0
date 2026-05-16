@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table in HTML</title>
+</head>
+<body>
+    <!--cellspacing:- space between cells
+        cellpadding:- space between content/data within cells -->
+    <table cellspacing="10" cellpadding="25" border="1" bgcolor="grey" align="center">
+      <caption style="text-align: center;" title="The caption tag defines a table caption.">Tables Desc</caption>
+      <thead>
+          <tr>
+            <th> Month </th>
+            <th> Product Category </th>
+            <th> Units Sold </th>
+            <th>Revenue ($) </th>
+          </tr>
+      </thead>
+      <tbody>  
+          <tr>
+            <!--rowspan will merge top to bottom row cells-->
+            <td rowspan="2" title="rowspan merges top to bottom rows cells">January</td>
+            <td>Furniture</td>
+            <td>150</td>
+            <td>$15,000</td>
+          </tr>
+          <tr>
+            <td>Electronics</td>
+            <td rowspan="2" title="rowspan merges top to bottom rows cells">135</td>
+            <td>$20,000</td>
+          </tr>
+          <tr>
+            <!--rowspan will merge top to bottom rows cells-->
+            <td rowspan="2" title="rowspan merges top to bottom rows cells">February</td>
+            <td>Furniture</td>
+            <td>$12,000</td>
+          </tr>
+          <tr>
+            <td>Electronics</td>
+            <td>180</td>
+            <td>$20,000</td>
+          </tr>
+      </tbody>
+      <tfoot>
+          <tr>
+            <!--colspan will merge left to right column cells-->
+            <td align="center" colspan="2" title="colspan merges left to right column cells">Total</td>
+            <td>650</td>
+            <td>$72,000</td>
+          </tr>
+      </tfoot>
+
+
+</table>
+
+
+</body>
+</html>

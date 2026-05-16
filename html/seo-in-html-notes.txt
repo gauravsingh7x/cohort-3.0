@@ -1,0 +1,9 @@
+SEO from HTML perspective is not just meta tags. It's the entire document structure.
+
+**Title tag** is the single highest-value SEO element. Format: `Primary Keyword — Secondary Keyword | Brand Name`.
+Keep it under 60 characters (Google truncates at ~580px width). Each page must have a unique title.
+
+**URL structure** (controlled by your server, referenced by HTML canonical): Clean, readable, keyword-rich URLs. `example.com/html-forms-tutorial` beats `example.com/page?id=234`.
+
+**Structured Data (Schema.org)** is HTML's secret SEO weapon.
+It's JSON-LD embedded in `<script>` tags that tells Google exactly what your content is:

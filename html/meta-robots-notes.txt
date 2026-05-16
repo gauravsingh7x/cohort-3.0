@@ -1,0 +1,50 @@
+Robots - HTML element used to provide specific instructions (directives) to search engine crawlers about how to crawl and index an individual page.
+
+    Key Directives
+        The content attribute holds the instructions, which can be combined using commas.
+            index / noindex: Tells search engines whether to include the page in their index (default is index).
+            follow / nofollow: Instructs bots to either follow or ignore the links found on the page.
+            noarchive: Prevents search engines from showing a "Cached" link for the page in search results.
+            nosnippet: Prevents a text snippet or video preview from appearing in search results.
+            noimageindex: Tells bots not to index images on the page.
+            none: Equivalent to using both noindex and nofollow. 
+
+
+    Targeting Specific Crawlers
+	By default, name="robots" applies to all cooperative crawlers. To target a specific bot, replace "robots" with the bot's user-agent name:
+
+	Default (Index & Follow): Tells bots to index the page and follow all links. (Not needed, as this is the default).
+             <meta name="robots" content="index, follow" />
+        
+	Noindex (Remove from search): Tells bots not to include the page in search results.
+             <meta name="robots" content="noindex" />
+        
+	Nofollow (Don't trust links): Tells bots not to follow links on the page, passing no equity.
+             <meta name="robots" content="nofollow" />
+
+        Block Everything (Noindex + Nofollow): Completely restricts indexing and link following.
+             <meta name="robots" content="noindex, nofollow" />
+
+        No Cached Copy: Prevents Google from showing a "Cached" link in search results.
+             <meta name="robots" content="noarchive" />
+
+        Hide Images: Prevents images on this page from being indexed.
+             <meta name="robots" content="noimageindex" />
+        
+	No Snippet: Prevents any description or video preview from showing in search results.
+             <meta name="robots" content="nosnippet" />   
+
+
+    Advanced Examples
+    	Maximum Snippet Length: Limits the text snippet for this page to 100 characters.
+        	<meta name="robots" content="max-snippet:100" />
+
+    	Max Image Preview: Sets the maximum size of an image preview in search results.
+        	<meta name="robots" content="max-image-preview:large" />
+
+    	Specific Crawler Rule: Only tells Googlebot to not translate the page.
+        	<meta name="googlebot" content="notranslate" />
+
+    	Index If Embedded: Allows a page to be indexed if it is embedded (e.g., in an <iframe>) on another page, even if it has a noindex tag.
+        	<meta name="robots" content="noindex, indexifembedded" />
+        

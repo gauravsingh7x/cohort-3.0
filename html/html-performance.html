@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Perfromance</title>
+
+    <!-- preload critical resources -->
+    <link rel="preload" href="/fonts/main.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/hero.jpg" as="image">
+    <link rel="preload" href="/critical.css" as="style">
+
+    <!-- preconnect to external domains (warm up the connection) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://api.example.com">
+
+    <!-- DNS prefetch (lighter than preconnect) -->
+    <link rel="dns-prefetch" href="https://analytics.example.com">
+
+    <!-- Prefetch next page (user will likely navigate here) -->
+    <link rel="prefetch" href="/next-page.html">
+
+    <!-- Inline critical CSS (fastest possible render) -->
+    <style>
+    /* Only above-the-fold styles here */
+        body { margin: 0; font-family: sans-serif; }
+        header { background: #fff; height: 60px; }
+    </style>
+
+    <!-- Then load the rest asynchronously -->
+    <link rel="stylesheet" href="/styles.css" media="print" onload="this.media='all'">
+
+
+</head>
+<body>
+    
+</body>
+</html>
