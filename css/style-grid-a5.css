@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+
+    display: grid;
+    grid-template-columns: 22% 20% 7% 27% 22%;
+    grid-template-rows: 29% 26% 7% 18% 18%;
+
+    grid-template-areas: 
+    "left-top top-center1 top-center1 top-center2 right-top"
+    "left-top center center center right-top"
+    "left-bottom center center center right-top"
+    "left-bottom center center center right-bottom"
+    "left-bottom bottom-center1 bottom-center2 bottom-center2 right-bottom"
+    ;
+
+    gap: 10px;
+}
+
+.left-top{
+    grid-area: left-top;
+    border:2px solid white;
+    border-radius:25px;
+    text-align: center;
+    background-color: lightgreen; 
+}
+
+.left-bottom{
+    grid-area: left-bottom;
+    border:2px solid white;
+    border-radius:25px;
+    text-align: center;
+    background-color: lightcoral;
+}
+
+.top-center1{
+    grid-area: top-center1;
+    border:2px solid white;
+    text-align: center;
+    border-radius:25px;
+    background-color: yellowgreen;
+}
+
+.top-center2{ 
+    grid-area: top-center2;
+    border:2px solid white;
+    text-align: center;
+    border-radius:25px;
+    background-color: red;
+}
+
+.center{
+    grid-area: center;
+    border:2px solid white;
+    text-align: center;
+    border-radius:25px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: lightgreen; 
+}
+.circle {
+    height: 100%;
+    width: 50%;
+background: linear-gradient(rgb(255, 233, 236), pink);    border-radius: 50%;
+}
+.center img {
+    position: absolute;
+    bottom: 0;
+    height: 500px;
+}
+
+.bottom-center1{
+    grid-area: bottom-center1;
+    border:2px solid white;
+    text-align: center;
+    border-radius:25px;
+    background-color: lightcoral;
+}
+
+.bottom-center2{
+    grid-area: bottom-center2;
+    border:2px solid white;
+    border-radius:25px;
+    background-color: yellowgreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+.bottom-center2-div1 {
+    padding: 15px;
+}
+.bottom-center2-div1 h3 {
+    font-size: 15px;
+}
+.bottom-center2-div1 p {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.bottom-center2-div1 button {
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    border: none;
+}
+.bottom-center2 img{
+    height: 90%;
+}
+
+.right-top{ 
+    grid-area: right-top;
+    border:2px solid white;
+    border-radius:25px;
+    background-color: red;
+    padding: 20px;
+}
+.right-top img{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: -10px;
+    border: 2px dashed black;
+}
+
+
+
+.right-bottom{
+    grid-area: right-bottom; 
+    border:2px solid white;
+    text-align: center;
+    border-radius:25px;
+    background-color:green;
+}
