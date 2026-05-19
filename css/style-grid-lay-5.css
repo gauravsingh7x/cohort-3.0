@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas: 
+    "top1 top-center right"
+    "bottom-left bottom-left right"
+    ;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.top1{
+    background-color: lightgreen;
+    grid-area: top1
+ 
+}
+
+.top-center{
+    background-color: lightcoral;
+    grid-area: top-center;
+
+}
+.bottom-left{
+    background-color: yellowgreen;
+    grid-area: bottom-left;
+}
+
+.right{ 
+    background-color: red;
+    grid-area: right;
+}

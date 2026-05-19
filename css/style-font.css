@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: grv-shadow;
+    src: url(/Shadow\ of\ the\ Deads.ttf);
+}
+
+@font-face {
+    font-family: grv-run;
+    src: url(./run_2/Run!\ Demo.otf);
+}
+
+h1 {
+    color: red;
+    background-color: #36d2d2;
+    font-size: 25px;
+    /*after installation we cam add simply by font-family name*/
+    /*    font-family: Run!;    */
+
+    font-family: grv-run;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    text-transform: capitalize;
+}
+

@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#bor {
+    height: 250px;
+    width: 250px;
+    background-color: royalblue;
+
+    border: 10px solid green;
+    /* border: 10px dashed green; */
+    /* border: 10px dotted green; */
+
+    /* border-radius: 0px 0px 15px 10px; */
+    /* border-radius: LT, RT, LB, RB; */
+    border-radius: 50%;
+
+    text-align: center;
+    margin: 50px 25px;
+    padding-top: 100px;    
+}
