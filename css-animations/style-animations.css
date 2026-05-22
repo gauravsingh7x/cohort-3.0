@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.box {
+    height: 100px;
+    width: 100px;
+    /* background-color: crimson; */
+    position: absolute;
+
+    /* to run animations */
+    animation-name: div-move;
+    animation-duration: 2s;
+    animation-delay: 2s;
+
+    /* looping to run again again */
+    /* animation-iteration-count: infinite; */
+}
+
+
+    /* anime is identifier.. can name anything */
+@keyframes div-move {
+    /* Initial Position OR State */
+    from{
+        left: 0;
+        background-color: aqua;
+        rotate: 0;
+        border-radius: 50px;
+    }
+    /* Final Position OR State*/
+    to {
+        left: 75%;
+        background-color: blue;
+        rotate: 360deg;
+        border-radius: 0;
+    }
+}
