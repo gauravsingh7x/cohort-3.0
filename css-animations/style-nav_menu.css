@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+    background-color: rgb(224, 191, 114);
+    height: 50px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    
+}
+
+.part2 {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.part2 a {
+    text-decoration: none;
+}
+h5{
+    font-size: 20px;
+    color: white;
+    display: none;
+}
+
+@media (max-width:550px) {
+    nav {
+        background-color: rgb(218, 119, 20);
+        height: 50px;
+        padding: 0px 20px;
+    }
+    h5{
+        display: block;
+    }
+    p {
+        display: none;
+    }
+}
+
+
