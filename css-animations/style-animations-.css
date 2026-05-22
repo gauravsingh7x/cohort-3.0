@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.parent {
+    background-color: crimson;
+    /* padding: 15px; */
+    display: flex;
+    overflow: hidden;
+}
+.inner {
+    background-color: blue;
+    /* padding: 15x; */
+    display: flex;
+
+    animation-name: slider;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+h4 {
+    background-color: skyblue;
+    padding: 15px;
+    font-size: 20px;
+
+    /* 
+    animation-name: slider;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    */
+}
+
+
+/* creating like marquee tag */
+@keyframes slider {
+    from{
+        transform: translateX(0);
+        /* transform: translateX(-100%); */
+    }
+    to{
+        transform: translateX(-100%);
+        /* transform: translateX(0); */
+    }
+}
+
