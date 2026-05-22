@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.box img{
+    height: 25  0px;
+    width: 250px;
+    /* background-color: crimson; */
+    position: absolute;
+
+    /* to run animations */
+    animation-name: dora;
+    animation-duration: 5s;
+    animation-delay: 2s;
+
+    /* animation-timing-function: ease-in; */
+    /* animation-timing-function: ease-out; */
+    /* animation-timing-function: ease-in-out; */
+    /* animation-timing-function: linear; */
+
+    /* https://cubic-bezier.com > to customize timing fun  */
+    animation-timing-function: cubic-bezier(0,.92,.45,.67);
+
+    /* animation-direction: reverse; */
+    animation-direction: alternate;
+
+
+    animation-fill-mode: forwards;
+    
+    /* looping to run again again */
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+}
+
+img:hover{
+    animation-play-state: paused;
+    
+    /* to run  */
+    /* animation-play-state: running; */
+}
+
+
+    /* anime is identifier.. can name anything */
+@keyframes dora {
+    /* Initial Position OR State */
+    0% {
+        left: 0;
+        top: 0;
+
+        rotate: 0;
+        background-color: aqua;
+    }
+
+    25% {
+        left: 75%;
+        top: 0;
+
+        rotate: 90deg;
+        background-color: blue;
+    }
+    50% {
+        left: 75%;
+        /* position screen height ki 50% */
+        top: 50%;
+
+        rotate: 180deg;
+        background-color:yellow;
+    }
+
+    75% {
+        left: 0%;
+        top: 50%;
+
+        rotate: 240deg;
+        background-color: green;
+    }
+
+    /* Final Position OR State*/
+    100% {
+        left: 0%;
+        top: 0%;
+
+        rotate: 360deg;
+    }
+}
+
+
+/* @keyframes dora {
+    /* Initial Position OR State */
+    from{
+        left: 0;
+        rotate: 0;
+    }
+    /* Final Position OR State*/
+    to {
+        left: 75%;
+        rotate: 360deg;
+    }
+} */
