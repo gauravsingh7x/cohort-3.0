@@ -1,4 +1,4 @@
-
+/*
 var math = Number(prompt("Enter mark in Math" ))
 var physics = Number(prompt("Enter mark in Physics" ))
 var chemistry = Number(prompt("Enter mark in Chemistry" ))
