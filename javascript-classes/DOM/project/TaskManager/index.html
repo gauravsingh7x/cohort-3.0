@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="main">
+        <section class="section-taskify flex">
+            <div style="margin-bottom: 1rem;">
+                <h1>Taskify</h1>
+                <h5>Interactive Task Manager</5>
+                    <p>A partner which will never let you forget something important</p>
+            </div>
+            <div>
+                <button class="theme">Theme Color</button>
+            </div>
+        </section>
+
+        <section class="section-add-task">
+            <h3>Add new task</h3>
+            <div class="add-task flex">
+                <div>
+                    <label for="task">Task Title</label>
+                    <input type="text" id="task" placeholder="Enter the task" required>
+                </div>
+
+                <div>
+                    <label for="category">Category</label>
+                    <select name="select-category" id="category">
+                        <option value="">Select Category</option>
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                    </select>
+                </div>
+
+                <div>
+                    <input type="button" id="addButton" value="Add Task">
+                </div>
+            </div>
+        </section>
+
+        <section class="card-task-list">
+            <!-- <h2>Task</h2> -->
+            <!-- <div class="card-task flex">
+                <div class="flex" style="gap: 1rem;">
+                    <input type="checkbox" value="checked" placeholder="completed">
+                    <div>
+                        <p class="card-task-title">task to be done</p>
+                        <span class="card-category" style="display: block;">category</span>
+                    </div>
+                </div>
+                <div>
+                    <button>Edit</button>
+                    <button>Delete</button>
+                </div>
+            </div> -->
+
+        </section>
+
+
+
+
+
+    </main>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
