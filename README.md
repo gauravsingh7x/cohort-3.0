@@ -6,6 +6,11 @@ https://mobile-first-web.vercel.app/
 https://mobile-first-web-design.netlify.app/
 <br>
 <br>
-Assignment6--twoleavestea
+Assignment 6 :- twoleavestea
 <br>
 https://live-first-demo.netlify.app/
+<br>
+<br>
+Assignment 7 :- Task Manager _ JS_DOM
+<br>
+https://grv-task-manager.netlify.app/
