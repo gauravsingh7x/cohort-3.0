@@ -263,8 +263,100 @@
 
 
 // 15. Explain output:
-function test() {
-    return;
-    console.log("Hello");
-}
-console.log(test());
+// function test() {
+//     return;
+//     console.log("Hello");
+// }
+// console.log(test());
+
+
+
+// Arrays Basics - Beginner
+// 1. Create an array of 5 fruits.
+let fruits = ['apple', 'banana', 'mango', 'orange', 'papaya'];
+console.log(fruits);
+console.log(fruits[1]);
+
+// 2. Print first and last element of array.
+console.log(fruits[0], fruits[fruits.length-1]);
+
+// 3. Find length of array.
+console.log(fruits.length);
+
+// 4. Add element at end using `push`.
+console.log(fruits.push('grapes'));
+//will return no. of elements(count), not array
+console.log(fruits);
+
+// 5. Remove last element using `pop`.
+console.log(fruits.pop());
+//remove but gives you this time only that last element 
+console.log(fruits);
+
+// 6. Add element at beginning using `unshift`.
+console.log(fruits.unshift('pine-apple'));
+//will return no. of elements not array
+console.log(fruits);
+
+// 7. Remove first element using `shift`.
+console.log(fruits.shift());
+////will return 1st elements of array lasl time then remove
+console.log(fruits)
+
+// 8. Reverse an array.
+console.log(fruits.reverse());
+
+// 9. Sort numbers ascending.
+let arr = [2,5,9,7,38,100]
+console.log(arr.sort((a,b)=>a-b));
+
+// 10. Sort numbers descending.
+console.log(arr.sort((a,b)=>b-a));
+
+
+// Arrays Basics - Intermediate
+// 1. Use `splice` to remove elements.
+let arrNum = [1, 6, 5, 3, 7, 10];
+let arrStr = ['garv', 'akshay', 'utkarsh', 'sumit', 'kina'];
+arrNum.splice(2, 6); //2 is indx and no of ele to be removed (indx ele also will be removed which given)
+arrStr.splice(2, 1); //2 is indx and no of ele to be removed
+console.log(arrNum);
+console.log(arrStr);
+
+// 2. Use `splice` to insert elements.
+arrNum.splice(2, 3, 2, 4, 6);    //2 is indx, 3 is no. of ele to be added then elemets for added
+console.log(arrNum);
+arrStr.splice(3, 1, 'subrat bhai');
+console.log(arrStr);
+
+// 3. Use `slice` to copy array.
+let newArrNum = arrNum.slice(0, arrNum.length)
+console.log(newArrNum);
+
+// 4. Find index of an element.
+console.log(newArrNum.indexOf(4));
+
+// 5. Check if array contains a value.
+console.log(newArrNum.includes(4));
+
+// 6. Join array elements with .
+console.log(newArrNum.join('_'));
+
+// 7. Merge two arrays using spread operator.
+
+
+// 8. Copy array using spread operator.
+
+
+// 9. Find maximum value using `Math.max`.
+
+
+// 10. Swap two variables using destructuring.
+let Arr = [1, 7];
+let a = Arr[0];
+let b = Arr[1];
+[b,a] = [a,b];
+console.log(a,b);
+
+
+// Array Iteration Methods
