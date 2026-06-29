@@ -6,6 +6,7 @@ function parent(){
     //     console.log(a);
     //     return a;
     // }
+    
     function child(){
         a++;
         console.log(a);

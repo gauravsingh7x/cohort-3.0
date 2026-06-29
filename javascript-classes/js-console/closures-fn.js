@@ -1,6 +1,31 @@
 
 
 
+
+// const name = "Global"; // 3. Global Scope
+
+// function outer() {
+//   const name = "Outer"; // 2. Outer Function Scope
+
+//   function inner() {
+//     const name = "Inner"; // 1. Local Scope
+//     console.log(name); 
+//   }
+
+//   inner();
+// }
+
+// outer();
+
+
+
+
+
+
+
+
+
+
 function outerFunction() {
     let user = "Gaurav Singh";
 
