@@ -1,0 +1,220 @@
+
+@media (max-width: 1024px){
+
+    header{
+        width: 95%;
+        padding: 0 1rem;
+    }
+
+    .menu-btn{
+        display: flex;
+        align-items: center;
+    }
+
+    .header-left,
+    .header-right-links{
+        display: none;
+    }
+
+    .hero-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(https://www.twoleavestea.com/cdn/shop/files/AlpineBerry_mobile.webp?v=1774284087&width=1350.0);
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* cards grid -> 2 columns */
+    .cards-section-cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .reviews-section-grid{
+        grid-template-columns: repeat(2,1fr);
+        height: auto;
+    }
+
+    .journal-grid{
+        grid-template-columns: repeat(2,1fr);
+        height: auto;
+    }
+
+    .journal-grid-card{
+        width: 100%;
+        height: 400px;
+    }
+
+    .discover > div{
+        margin: 0 4rem;
+    }
+
+    .explore-buttonlike-card{
+        flex-wrap: wrap;
+        gap: 1rem;
+        line-height: normal;
+    }
+
+    .wholesale-partner{
+        flex-direction: column;
+    }
+
+    .wholesale-partner-image,
+    .wholesale-partner-text{
+        width: 100%;
+    }
+
+    .lattes-image{
+        flex-direction: column;
+    }
+
+    .lattes-image-main img{
+        width: 100%;
+        bottom: 0;
+    }
+
+    .orange-box{
+        width: 60%;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .footer-links-first{
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}
+
+
+
+@media (max-width: 768px){
+
+    header{
+        height: auto;
+        padding: 1rem;
+    }
+
+    .header-logo{
+        margin-right: 0;
+    }
+
+    .hero-section{
+        height: auto;
+        padding-bottom: 5rem;
+        background-image: url(https://www.twoleavestea.com/cdn/shop/files/AlpineBerry_mobile.webp?v=1774284087&width=1350.0);
+    }
+
+    .hero-section-text{
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        padding: 8rem 1rem 2rem;
+    }
+
+    .hero-section-text p br,
+    .cards-section-heading br,
+    .discoverText br,
+    .journal-text-main-text br{
+        display: none;
+    }
+
+    .hero-section-text button{
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* cards -> 1 column */
+    .cards-section-cards{
+        margin: 0;
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .cards-section-cards-one{
+        min-height: 320px;
+    }
+
+    .reviews-section-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .journal-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .journal-grid-card{
+        height: 350px;
+    }
+
+    .discover > div{
+        margin: 0 1rem;
+    }
+
+    .inputArea input{
+        width: 100%;
+        height: 4rem;
+    }
+
+    .explore-buttonlike-card{
+        font-size: 18px;
+        flex-wrap: wrap;
+        line-height: normal;
+    }
+
+    .main-section{
+        height: auto;
+        padding: 5rem 1rem;
+    }
+
+    .main-section-founder{
+        margin: 5rem 0;
+    }
+
+    .main-section-icon{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+        gap: 3rem;
+    }
+
+    .main-section-icon-first{
+        width: 120px;
+    }
+
+    .main-section-button button{
+        margin-top: 5rem;
+    }
+
+    .review-section-grid-card-text{
+        flex-wrap: wrap;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .lattes-image-text{
+        margin-left: 0;
+        padding: 2rem 1rem;
+    }
+
+    .orange-box{
+        width: 90%;
+        left: 5%;
+        top: 5%;
+    }
+
+    .footer-links-first,
+    .footer-links-second{
+        flex-direction: column;
+        margin-left: 0;
+        gap: 2rem;
+    }
+
+    .footer-bg{
+        background-size: cover;
+    }
+
+    .arrow-down-button{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

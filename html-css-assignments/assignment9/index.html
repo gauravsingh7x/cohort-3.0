@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheryians-Assignements</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const savedTheme = localStorage.getItem('dashboard-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</head>
+<body>
+
+    <!-- GLOBAL CELEBRATION MATRIX OVERLAY -->
+    <div id="celebration-overlay" class="celebration-overlay hidden">
+        <div class="celebration-card">
+            <div class="celebration-icon">🏆</div>
+            <h3>Milestone Cleared!</h3>
+            <p id="celebration-message">All objectives for this tracking node have been executed cleanly.</p>
+            <button id="close-celebration" class="primary-btn">Acknowledge Victory</button>
+        </div>
+    </div>
+
+    <div class="app-layout">
+        
+        <!-- FIXED SIDEBAR ARCHITECTURE -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <!-- Logo works as the expand button when collapsed -->
+                <div id="sidebar-logo-node" class="sidebar-logo" title="Expand Sidebar">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    <span class="logo-text">FocusKaro</span>
+                </div>
+                <button id="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Collapse Sidebar">◂</button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-target="todo-view">
+                    <span class="nav-icon">📝</span>
+                    <span class="nav-label">Todo Planner</span>
+                </button>
+                <button class="nav-item" data-target="planner-view">
+                    <span class="nav-icon">📅</span>
+                    <span class="nav-label">Hourly planner</span>
+                </button>
+                <button class="nav-item" data-target="goals-view">
+                    <span class="nav-icon">🎯</span>
+                    <span class="nav-label">Daily Goals</span>
+                </button>
+                <button class="nav-item" data-target="pomodoro-view">
+                    <span class="nav-icon">⏱️</span>
+                    <span class="nav-label">Pomodoro Timer</span>
+                </button>
+                <button class="nav-item" data-target="quote-view">
+                    <span class="nav-icon">💡</span>
+                    <span class="nav-label">Quotes</span>
+                </button>
+                <button class="nav-item" data-target="weather-view">
+                    <span class="nav-icon">🌤️</span>
+                    <span class="nav-label">Weather</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button id="theme-toggle" class="btn-toggle" aria-label="Toggle Appearance">
+                    <span class="theme-icon">🌓</span>
+                    <span class="nav-label">Theme Mode</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- MAIN WORKSPACE -->
+        <div class="main-workspace">
+            <header class="app-header">
+                <div class="header-left">
+                    <div id="live-clock" class="clock-display">00:00:00</div>
+                    <div id="live-date" class="date-display">Loading...</div>
+                </div>
+                <div class="header-right">
+                    <div id="header-weather" class="weather-minimal">Locating sensor node...</div>
+                </div>
+            </header>
+
+            <main class="app-container">
+                
+                <!-- ADVANCED TASK MANAGEMENT -->
+                <section id="todo-view" class="view-section">
+                    <div class="section-title-block">
+                        <h2>Task Control Board</h2>
+                        <p class="section-subtitle">Categorize and process tasks by critical priority weightings.</p>
+                    </div>
+                    <form id="todo-form" class="advanced-input-group">
+                        <input type="text" id="todo-input" placeholder="Enter high-priority operational item..." required autocomplete="off" />
+                        <select id="todo-priority" class="form-select">
+                            <option value="low">Low Priority</option>
+                            <option value="medium" selected>Medium Priority</option>
+                            <option value="high">High Priority</option>
+                        </select>
+                        <button type="submit" class="primary-btn">Deploy Task</button>
+                    </form>
+                    <ul id="todo-list" class="item-list"></ul>
+                </section>
+
+                <!-- DYNAMIC HOURLY PLANNER -->
+                <section id="planner-view" class="view-section hidden">
+                    <div class="section-title-block">
+                        <h2>Custom Chronological Planner</h2>
+                        <p class="section-subtitle">Select tracking boundaries using standard incremental selector wheels.</p>
+                    </div>
+                    <form id="planner-form" class="picker-form-card">
+                        <div class="picker-row">
+                            <div class="picker-group">
+                                <label class="picker-label">Start Time</label>
+                                <div class="custom-time-picker-wheels">
+                                    <select id="planner-start-hour" class="form-select wheel-select"></select>
+                                    <span class="time-colon">:</span>
+                                    <select id="planner-start-min" class="form-select wheel-select"></select>
+                                </div>
+                            </div>
+
+                            <div class="picker-delimiter">to</div>
+
+                            <div class="picker-group">
+                                <label class="picker-label">End Time</label>
+                                <div class="custom-time-picker-wheels">
+                                    <select id="planner-end-hour" class="form-select wheel-select"></select>
+                                    <span class="time-colon">:</span>
+                                    <select id="planner-end-min" class="form-select wheel-select"></select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="picker-input-line">
+                            <input type="text" id="planner-label" placeholder="Block out tracking focus (e.g., Deep Work, Strategy Architecture)..." required autocomplete="off" />
+                            <button type="submit" class="primary-btn">Deploy Time Block</button>
+                        </div>
+                    </form>
+                    <div id="planner-container" class="custom-planner-stream"></div>
+                </section>
+
+                <!-- DAILY MACRO GOALS -->
+                <section id="goals-view" class="view-section hidden">
+                    <div class="section-title-block">
+                        <h2>Daily High-Impact Targets</h2>
+                        <p class="section-subtitle">Track core non-negotiable achievements for your tracking cycle.</p>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-meta">
+                            <span id="goals-metrics">0 of 0 Completed</span>
+                            <span id="goals-percentage" class="percentage-badge">0% Completed</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div id="goals-progress-fill" class="progress-bar-fill"></div>
+                        </div>
+                    </div>
+                    <form id="goals-form" class="input-group">
+                        <input type="text" id="goal-input" placeholder="Define a foundational daily target..." required autocomplete="off" />
+                        <button type="submit" class="primary-btn">Initialize Target</button>
+                    </form>
+                    <ul id="goals-list" class="item-list"></ul>
+                </section>
+
+                <!-- PARAMETRIC POMODORO TIMER -->
+                <section id="pomodoro-view" class="view-section hidden">
+                    <div class="timer-card">
+                        <span id="pomodoro-status" class="timer-badge">System Idle</span>
+                        <div id="pomodoro-display" class="timer-countdown">25:00</div>
+                        
+                        <!-- HIGH-ACCESSIBILITY STEPPER INTERFACE -->
+                        <div class="pomodoro-config-panel">
+                            <div class="config-field">
+                                <label>Work Focus</label>
+                                <div class="stepper-control">
+                                    <button type="button" class="step-btn down" data-target="pomo-work-val">-</button>
+                                    <span id="pomo-work-val" class="step-value">25</span><span class="step-unit">m</span>
+                                </div>
+                            </div>
+                            <div class="config-field">
+                                <label>Short Break</label>
+                                <div class="stepper-control">
+                                    <button type="button" class="step-btn down" data-target="pomo-short-val">-</button>
+                                    <span id="pomo-short-val" class="step-value">5</span><span class="step-unit">m</span>
+                                </div>
+                            </div>
+                            <div class="config-field">
+                                <label>Long Break</label>
+                                <div class="stepper-control">
+                                    <button type="button" class="step-btn down" data-target="pomo-long-val">-</button>
+                                    <span id="pomo-long-val" class="step-value">15</span><span class="step-unit">m</span>
+                                </div>
+                            </div>
+                            <div class="config-field">
+                                <label>Iterations</label>
+                                <div class="stepper-control">
+                                    <button type="button" class="step-btn down" data-target="pomo-rounds-val">-</button>
+                                    <span id="pomo-rounds-val" class="step-value">4</span><span class="step-unit">x</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="pomo-round-tracker" class="round-tracker">Cycle Loop: 1 / 4</div>
+
+                        <div class="timer-controls">
+                            <button id="pomo-start" class="success-btn">Execute Interval</button>
+                            <button id="pomo-pause" class="warning-btn">Pause Engine</button>
+                            <button id="pomo-reset" class="danger-btn">Reset Configuration</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- INSIGHT MANAGEMENT HUB -->
+                <section id="quote-view" class="view-section hidden">
+                    <div class="quote-workspace-layout">
+                        <div class="quote-card">
+                            <div class="quote-decorator">“</div>
+                            <p id="quote-text" class="quote-body">Sourcing fresh conceptual frameworks...</p>
+                            <p id="quote-author" class="quote-source">—</p>
+                            <div class="quote-actions-row">
+                                <button id="new-quote-btn" class="secondary-btn">Cycle Matrix</button>
+                                <button id="favorite-quote-btn" class="secondary-btn structural-star-btn">★ Save to Archive</button>
+                            </div>
+                        </div>
+                        <div class="favorites-panel">
+                            <h3>Archived Focus Frameworks</h3>
+                            <ul id="favorites-list" class="favorites-stream"></ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- METEO CHRONO-WEATHER -->
+                <section id="weather-view" class="view-section hidden">
+                    <div class="section-title-block">
+                        <h2>Chronological Atmospheric Diagnostics</h2>
+                        <p class="section-subtitle">Granular atmospheric breakdowns sorted by operational time frames.</p>
+                    </div>
+                    <div id="weather-expanded" class="weather-card-full"></div>
+                    <h3 class="subsection-header">Next 6 Hours Outlook</h3>
+                    <div id="weather-hourly-grid" class="weather-hourly-timeline"></div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
