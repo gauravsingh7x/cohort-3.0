@@ -1,0 +1,921 @@
+@font-face {
+    font-family: reckless;
+    src: url(./assets/RecklessCollectionVF-TRIAL.ttf);
+}
+@font-face {
+    font-family: midnight;
+    src: url("./assets/victory-striker-sans-demo.regular.otf");
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+main{
+    width: 100%;
+    height: 100%;
+}
+.topbar {
+  background: #2a2857;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-family: "Roboto Mono";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+header{
+    width: 97%;
+    height: 7vh;
+    font-family: reckless;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    border: 1px solid rgb(56, 56, 56);
+    border-radius: 0.5rem;
+    padding: 0 1.5rem;
+    position: sticky;
+    top: 0;
+    background-color: #dad9d3;
+    z-index: 10;
+   
+}
+
+.header-left{
+    width: 20%;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 27px;
+    color: rgb(32, 28, 26);
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    
+}
+.header-left-a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(32, 28, 26);
+}
+.header-left-dropdown{
+    width:1.11rem;
+    height: 1.11rem;
+    background-color: lightblue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-left-dropdown:hover{
+    background-color: rgb(224, 198, 30);
+    
+}
+.header-left-dropdown:hover svg{
+    display: none;
+}
+.header-left-dropdown:hover .up-arrow{
+    display: inline;
+}
+.menu-btn{
+    display: none;
+}
+.header-logo{
+    max-width: 45%;
+    display: flex;
+    /* margin-left: 7rem; */
+}
+.header-logo img{
+    min-width: 6.6875rem;
+    max-width: 6.6875rem;
+}
+.header-right{
+    max-width: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+.header-right a{
+    font-family: "Roboto Mono";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 1px;
+    color: rgb(32, 28, 26);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.header-notification{
+    width:1rem;
+    height:1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(222, 178, 19);
+    border-radius: 50%;
+    position: absolute;
+    left: 98%;
+    bottom: 40%;
+}
+.hero-section{
+    width:100%;
+    height: 87vh;
+    background-image: url(./assets/AlpineBerry.webp);
+    background-size: 150% ;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid black;
+    padding-bottom: 2rem;
+    position: relative;
+
+}
+.hero-section-text{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    margin-left:2rem;
+    gap: 1.5rem;
+}
+.hero-section-text h1{
+    font-family: Reckless, Helvetica, Arial, sans-serif;
+font-size: 84px;
+font-weight: 300;
+line-height: 84px;
+color: rgb(251, 249, 235);
+}
+.hero-section-text p{
+    font-family: Figtree, sans-serif;
+font-size: 18px;
+font-weight: 400;
+line-height: normal;
+color: rgb(251, 249, 235);
+}
+.hero-section-text button{
+    font-family: Figtree, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    color: white;
+    background-color: #2a2857;
+    width:201px;
+    height: 51px;
+    border-radius: 1.5rem;
+    border: none;
+}
+.arrow-down-button{
+    width: 3rem;
+    aspect-ratio: 1/1;
+    background-color:#2a2857 ;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 96.5%;
+    left: 95%;
+}
+.cards-section{
+    background-color: #fbf9eb;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.cards-section-heading{
+font-family: Reckless, Helvetica, Arial, sans-serif;
+font-size: 63.4682px;
+font-weight: 300;
+line-height: 63.4682px;
+color: rgb(32, 28, 26);
+text-align: center;
+margin: 108px 0 135px 0;
+}
+.cards-section-cards{
+    width:100vw;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr;
+    overflow: hidden;
+    gap:1.5rem;
+    margin-inline-start: 2rem;
+}
+.cards-section-cards-container:hover .cards-image{
+    transform: scale(1.1);
+
+}
+.cards-section-cards-one{
+    width:20vw;
+    height:40vh;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    background-color: #c1ee91;
+    overflow: hidden;
+    position: relative;
+}
+.cards-section-cards-one button{
+    position: absolute;
+    width: 17%;
+    height: 12%;
+    border: 1px solid black;
+    border-radius: 10px;
+    top: 85%;
+    left: 80%;
+    color: black;
+    
+}
+.cards-section-cards-one img{
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    object-position: center 60%;
+    margin-left: 1rem;
+}
+
+.cards-section-cards-one-label{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    gap: 50px;
+    top: 5%;
+    left: 5%;
+}
+.cards-section-cards-one-label-text{
+    background-color: white;
+    border-radius: 10px;
+    width:fit-content;
+    height: 2.2rem;
+    border: 1px solid black;
+    font-family: midnight;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 2px;
+    color: rgb(32, 28, 26);
+    text-align: center;
+    line-height: 2.2;
+    padding: 0 5px;
+}
+.cards-text{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.cards-text h2{
+    font-family: Reckless;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 27.6px;
+    color: rgb(32, 28, 26);
+}
+.cards-text h6{
+    font-family: Figtree, sans-serif;
+font-size: 12px;
+font-weight: 500;
+line-height: 18.2px;
+color: rgb(32, 28, 26);
+}
+.cards-text p{
+    font-family: Figtree, sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 18.2px;
+color: rgb(110, 106, 104);
+}
+.cardsTwo{
+   background-color: #ffd884;
+}
+.cardsThree{
+    background-color:#b0e8c1 ;
+}
+.cardsFour{
+    background-color: #c1e4f8;
+}
+.slidingEffect{
+    margin:5rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.slideDiv{
+    width:3rem;
+    height: 1px;
+    border: 1px solid black;
+    margin: 0 0.5rem;
+}
+.slideDivTwo{
+    border: 1px solid rgb(122, 114, 114);
+}
+.ExploreTeas{
+    display: flex;
+    justify-content: center;
+}
+.ExploreTeas button{
+    width:15rem;
+    height: 7vh;
+    border-radius: 2rem;
+    background-color: #2a2857;
+    color: white;
+    font-family: Figtree, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 0.4rem;
+    margin-bottom: 5rem;
+}
+.discover{
+    padding-top: 5rem;
+    background-color: #fbf9eb;
+    width: 100%;
+    height:height;
+}
+.discoverfirst{
+    padding-top: 0.4rem;
+    transform: rotate(-3deg);
+    width:12rem;
+    text-align: center;
+    height: fit-content;
+    font-family: Midnight;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 60px;
+    color: rgb(32, 28, 26);
+    background-color:#ff7f31 ;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.discover > div{
+    margin: 0 20rem;
+}
+.discoverText{
+    margin-top: 2rem;
+    font-family: Reckless, Helvetica, Arial, sans-serif;
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 63px;
+    color: rgb(32, 28, 26);
+
+}
+.inputArea input{
+    margin-top: 3rem;
+    width: 25rem;
+    height: 5rem;
+    border-radius: 10px;
+    border: 1px solid rgb(132, 131, 131);
+    background-color: transparent;
+    margin-bottom: 6rem;
+}
+.inputArea input:active{
+    width:60rem;
+    height: 5rem;
+}
+.explore-buttonlike{
+    padding-bottom: 7rem;
+}
+.explore-buttonlike p{
+   margin-bottom: 2rem;
+   font-family: Figtree, sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 14px;
+color: rgb(32, 28, 26);
+}
+.explore-buttonlike-card{
+   
+    display: flex;
+    font-family: Reckless;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(32, 28, 26);
+}
+.explore-buttonlike-card div{
+    width: fit-content;
+    white-space: nowrap;
+    background-color: #daeaff;
+    border-radius: 10px;
+    margin: 0.2rem;
+    border:1px solid black;
+    padding: 1rem;
+}
+.main-section{
+    max-width: 100vw;
+    height: 250vh;
+    background-image: url(https://www.twoleavestea.com/cdn/shop/files/adam-vradenburg-_gu7E90QChU-unsplash_1_1.webp?v=1771592855&width=2560);
+    background-repeat: no-repeat;
+
+}
+.main-section-born{
+    font-family: Midnight;
+    font-size: 8rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    letter-spacing: 5px;
+}
+.main-section-founder{
+    font-family: Reckless, Helvetica, Arial, sans-serif;
+font-size: 60px;
+font-weight: 300;
+line-height: 69px;
+color: rgb(255, 255, 255);
+margin: 30rem 5rem 0 7rem;
+text-wrap: balance;
+}
+.main-section-icon{
+    margin-top: 30rem;
+    display: flex;
+    gap:9rem;
+    justify-content: center;
+}
+.main-section-icon-first{
+    width:6vw;
+}
+.main-section-button{
+    display: flex;
+    justify-content: center;
+}
+.main-section-button button{
+    margin-top: 20rem;
+    width:10rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    font-family: sans-serif;
+    font-size: 1rem;
+
+}
+.reviews-section{
+    background-color:#fbf9eb ;
+    margin-bottom: 7rem;
+}
+.reviews-section-margin{
+    margin: 5rem 5rem;
+}
+.review{
+    background-color:#73bc25 ;
+}
+
+.reviews-section-grid{
+    max-width:100vw;
+    height: 45vh;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr;
+    margin-left: 1rem;
+    gap: 1rem;
+}
+.reviews-section-grid-cards{
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+.review-first{
+    
+    background-color:#f5af8a;
+
+}
+.reviews-section-grid-cards h2{
+    font-family: Reckless;
+font-size: 32px;
+font-weight: 300;
+line-height: 36.48px;
+color: rgb(32, 28, 26);
+}
+.reviews-section-grid-cards p{
+    font-family: Figtree, sans-serif;
+font-size: 14px;
+font-weight: 500;
+line-height: 17.08px;
+color: rgb(32, 28, 26);
+margin-bottom: 5rem;
+}
+
+.review-second{
+    background-color:#abdf74 ;
+
+}
+.review-third{
+    background-color:#ffd265 ;
+
+}
+.review-fourth{
+    background-color:#ade674 ;
+
+}
+.review-fifth{
+    background-color:#d9c2e1 ;
+
+}
+.reviews-section-grid-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.review-section-grid-card-text{
+    margin-inline: auto;
+    width:90%;
+    height: 20%;
+    border: 1px solid rgb(80, 80, 80);
+    display: flex;
+    align-items: center;
+    background-color: #ea6d44;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+
+}
+.review-section-grid-card-text-image{
+    height: 100% ;
+    border-right: 1px solid rgb(80,80,80);
+    display: flex;
+    align-items: center;
+}
+.review-section-grid-card-text-image img{
+    height: 7vh;
+}
+.review-section-grid-card-text button{
+    padding: 0.7rem;
+    border: 1px solid rgb(80,80,80);
+    border-radius: 1.2rem;
+    margin: 0 0.5rem;
+}
+.review-section-grid-card-text-Text{
+    padding-left: 0.5rem;
+}
+.changeText h2{
+font-family: Reckless;
+font-size: 24px;
+font-weight: 300;
+line-height: 31.2px;
+color: rgb(32, 28, 26);
+/* padding: 25px 0 0 20px ; */
+}
+.background2{
+    background-color: #73bc25;
+}
+.background3{
+    background-color: #ffb500;
+}
+.background4{
+    background-color: #8bc045;
+}
+.background5{
+    background-color: #c790db;
+}
+.wholesale-partner{
+    width: 100%;
+    display: flex;
+
+}
+.wholesale-partner-image{
+    width: 50%;
+}
+.wholesale-partner-image img{
+    width:100%;
+}
+.wholesale-partner-text{
+    width:50%;
+    background-color: #2a2857;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 3rem;
+}
+.wholesale-partner-text-h2 h2{
+    font-family: Reckless, Helvetica, Arial, sans-serif;
+    font-size: 84px;
+    font-weight: 300;
+    line-height: 85px;
+    color: rgb(255, 255, 255);
+}
+.wholesale-partner-text-p p{
+    font-family: Figtree, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: normal;
+    color: rgb(255, 255, 255);
+}
+.wholesale-partner-text-button button{
+    width: 12rem;
+    height: 3rem;
+    border-radius: 1.6rem;
+    font-size: 1rem;
+}
+.lattes{
+    width:100%;
+    background-color:#9f6429;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+
+}
+.discoverfirst{
+    width: fit-content;
+    padding: 0.7rem;
+}
+.barista{
+    font-family: Arial, Helvetica, sans-serif;
+font-size: 4vw;
+font-weight: 700;
+color: rgb(255, 255, 255);
+}
+.lattes-image{
+    width: 90%;
+    border-radius: 1rem;
+    display: flex;
+    background-color:#ffcb96 ;
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+}
+.lattes-image-main img{
+    position:relative;
+    bottom: 10%;
+}
+.lattes-image-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin-left: 2rem;
+}
+.chai-latte{
+    font-family: Reckless, Helvetica, Arial, sans-serif;
+font-size: 69.4275px;
+font-weight: 300;
+line-height: 69.4275px;
+color: rgb(32, 28, 26);
+}
+.chai-latte-p{
+    font-family: Figtree, sans-serif;
+font-size: 18px;
+font-weight: 400;
+line-height: 23.4px;
+color: rgb(32, 28, 26);
+}
+.chai-latte-button button{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    border: 1px solid black;
+
+}
+.journalbg{
+    background-color: orange;
+}
+.journal{
+    background-color: #fbf9eb;
+    margin: 5rem 0 5rem 3rem;
+}
+.journal-text-main-text{
+    font-family: Reckless, Helvetica, Arial, sans-serif;
+font-size: 60px;
+font-weight: 300;
+line-height: 63px;
+color: rgb(32, 28, 26);
+}
+.journal-grid{
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr;
+    gap: 0.7rem;
+    margin-top: 3rem;
+}
+.journal-grid-card{
+    width:18vw;
+    height: 40vh;
+    border: 1px solid black;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.journal-grid-card-image{
+    width:100%;
+    height:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a2857;
+    object-fit: cover;
+}
+.journal-grid-card-image img{
+    width: 95%;
+}
+.journal-grid-card-text{
+    height: 20%;
+    background-color: #C0DBFF;
+    display: flex;
+    align-items: center;
+    font-family: Figtree, sans-serif;
+font-size: 0.8rem;
+font-weight: 400;
+line-height: 27px;
+color: rgb(32, 28, 26);
+justify-content: center;
+}
+.journal-grid-image{
+    width: 100%;
+    height: 80%;
+}
+.journal-grid-image img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.journal-explore-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:15rem;
+    height: 3rem;
+    background-color:#2a2857;
+    font-family: Figtree, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    border-radius: 1.3rem;
+    text-align: center;
+
+}
+.journal-explore-button-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.orange-bg-image{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://www.twoleavestea.com/cdn/shop/files/Two_Leaves_Tea_Aug_25_Shoot-14x_SQ_1_d549e6bb-f1ad-4b36-a851-05e1af195a31.webp?v=1771593222&width=3150.0);
+    background-size:cover;
+    background-position: 50% 50%;
+    position: relative;
+
+}
+.orange-box{
+    padding-left: 2rem;
+    width:25vw;
+    height:80vh;
+    background-color: #f26412;
+    position: absolute;
+    top: 7%;
+    left: 3%;
+    border-radius: 1.3rem;
+    font-family: Reckless, Helvetica, Arial, sans-serif;
+font-size: 60px;
+font-weight: 300;
+line-height: 61px;
+color: rgb(255, 255, 255);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+border: 1px solid black;
+
+}
+.orange-box button{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:7rem;
+    height: 3rem;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 1.5rem;
+}
+.footer-upper-part{
+    width: 100%;
+    height: 35vh;
+    margin-top: 10rem;
+
+}
+
+.footer-bg{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://www.twoleavestea.com/cdn/shop/files/footer-extended_1.png?v=1771834074);
+    background-size: 320%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.footer-links{
+    padding: 3rem;
+    margin: 0 2rem;
+    background-color: #2a2857;
+    color: white;
+    border-radius: 1.5rem;
+}
+.footer-links-first{
+    display: flex;
+    justify-content: space-around;
+}
+.footer a{
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+.footer-links-second{
+    display: flex;
+    justify-content: start;
+    margin-left: 5rem;
+}
+.footer-links-second-first{
+    margin: 2rem 2rem 0 0;
+}
+.footer-links-second-second{
+    margin: 2rem 2rem;
+}
+
+
+
+
+
+
+
+
+
+.cards-section-cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 1.5rem;
+}
+
+.cards-section-cards-container{
+    width: 100%;
+}
+
+.cards-section-cards-one{
+    width: 100%;
+    height: auto;
+    min-height: 330px;
+}
+
+.cards-image{
+    transition: 0.4s ease;
+}
+
+
+
+.hero-section-text h1{
+    font-size: clamp(2.5rem, 8vw, 5.25rem);
+    line-height: 1;
+}
+
+.cards-section-heading{
+    font-size: clamp(2rem, 6vw, 4rem);
+    line-height: 1.1;
+}
+
+.discoverText{
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    line-height: 1.1;
+}
+
+.main-section-born{
+    font-size: clamp(3rem, 10vw, 8rem);
+}
+
+.main-section-founder{
+    font-size: clamp(2rem, 5vw, 3.7rem);
+    line-height: 1.2;
+}
+
+.wholesale-partner-text-h2 h2{
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    line-height: 1.1;
+}
+
+.chai-latte{
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+}
+
+.journal-text-main-text{
+    font-size: clamp(2rem, 5vw, 3.7rem);
+    line-height: 1.1;
+}
+
+.orange-box{
+    font-size: clamp(2rem, 5vw, 3.7rem);
+    line-height: 1.1;
+}
