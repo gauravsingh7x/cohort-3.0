@@ -29,7 +29,12 @@ const Form = ({setUsers, setToggle, users, updateUser}) => {
                     //if the ID of existing userObj is same with current updateUser's ID
                     //then update new-current inputData > will be updated by new ref obj at same place in array
                     //if not same reutrn same userObj
+                    
+                    
+                    localStorage.setItem("users", JSON.stringify(inputData))
+
                     return userObj.id === updateUser.id ? {...inputData} : userObj; 
+
                 })
 
             })
