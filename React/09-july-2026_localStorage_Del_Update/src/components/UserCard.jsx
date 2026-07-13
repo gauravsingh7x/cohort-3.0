@@ -2,7 +2,6 @@
 
 const UserCard = ({user, setToggle}) =>{
 
-
     
     return (
         <div className="p-5 flex flex-col items-center gap-5 bg-sky-300 h-80 w-60">

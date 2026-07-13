@@ -8,7 +8,11 @@ const App = () => {
 
   const [toggle, setToggle] = useState(false);
 
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState(
+    () => {
+      return JSON.parse(localStorage.getItem("users"));
+    }
+  );
 
 
   return (
@@ -17,8 +21,6 @@ const App = () => {
         <Navbar setToggle={setToggle}/>
       </div>
 
-
-
 {
   toggle? <div className="flex gap-5">
         {users.map((elem, idx)=>{
@@ -26,11 +28,9 @@ const App = () => {
         })}
       </div> :
         <div className="flex justify-center items-center h-[70%]:">
-      <Form setUsers={setUsers} setToggle={setToggle}/>
+      <Form users={users} setUsers={setUsers} setToggle={setToggle}/>
     </div>
 }
-      
-
     
     </div>
   )

@@ -1,8 +1,8 @@
+import { data } from "autoprefixer";
 import { useForm } from "react-hook-form"
 
 
-const Form = ({setUsers, setToggle}) => {
-
+const Form = ({setUsers, setToggle, users}) => {
 
 
     
@@ -14,9 +14,13 @@ const Form = ({setUsers, setToggle}) => {
     } = useForm({mode:"onChange"});
 
     let formSubmit = (inputData) =>{
-        console.log(inputData);
+        // console.log(inputData);
         // setUsers([...users, inputData]); //'users' to hamare pas hai nhi to parent me bane useState ka prev use karenge  
-        setUsers((prev)=>[...prev, inputData])
+
+        let updatedUsers = [...users, inputData];
++       setUsers(updatedUsers);  //1 step piche chal rhe the so at the time of setUsers, we storing data in local storage too
+        // setUsers((prev)=>[...prev, inputData])
+        localStorage.setItem("users", JSON.stringify(updatedUsers))
         reset(); 
         setToggle((prev)=>!prev);
     }
