@@ -1,6 +1,6 @@
 
 
-const UserCard = ({user, setToggle}) =>{
+const UserCard = ({user, setToggle, deleteUser, id}) =>{
 
     
     return (
@@ -21,7 +21,13 @@ const UserCard = ({user, setToggle}) =>{
                     setToggle((prev)=>!prev)
                 }}
                 className="bg-purple-500 px-2 rounded-xl">Update</button>
-                <button className="bg-purple-500 px-2 rounded-xl">Delete</button>
+     
+                <button 
+                onClick={()=>deleteUser(id)
+                // onClick={()=>deleteUser(user.name)
+                // onClick={()=>console.log(user.idx);
+                }
+                className="bg-purple-500 px-2 rounded-xl">Delete</button>
             </div>
 
         </div>

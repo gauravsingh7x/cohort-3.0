@@ -6,13 +6,22 @@ import { useState } from "react";
 
 const App = () => {
 
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
 
   const [users, setUsers] = useState(
-    () => {
-      return JSON.parse(localStorage.getItem("users"));
-    }
+      JSON.parse(localStorage.getItem("users")) || []
   );
+
+  let deleteUser = (id)=>{
+    let filterUser = users.filter((val, index)=>{
+        return index !== id;
+        // return index === id;
+    });
+    setUsers(filterUser);
+    localStorage.setItem("users", JSON.stringify(filterUser));
+    // console.log(filterUser);
+    // console.log(id);
+  }
 
 
   return (
@@ -22,9 +31,9 @@ const App = () => {
       </div>
 
 {
-  toggle? <div className="flex gap-5">
+  toggle? <div className="flex flex-wrap gap-5">
         {users.map((elem, idx)=>{
-          return <UserCard user={elem} key={idx} setToggle={setToggle}/>
+          return <UserCard id={idx} deleteUser={deleteUser} idx={idx} key={idx} user={elem} key={idx} setToggle={setToggle}/>
         })}
       </div> :
         <div className="flex justify-center items-center h-[70%]:">
