@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form"
+import { nanoid } from 'nanoid'
 
-
-const Form = ({setUsers, setToggle, users}) => {
+const Form = ({setUsers, setToggle, users, updateUser}) => {
 
 
     
@@ -10,16 +10,42 @@ const Form = ({setUsers, setToggle, users}) => {
         handleSubmit, 
         reset, 
         formState:{ errors },
-    } = useForm({mode:"onChange"});
+    } = useForm({mode:"onChange",
+        defaultValues : updateUser,
+        // {
+        //     name: "atik",
+        //     email: "atik@gmail.com"
+        // },
+    });
 
     let formSubmit = (inputData) =>{
         // console.log(inputData);
         // setUsers([...users, inputData]); //'users' to hamare pas hai nhi to parent me bane useState ka prev use karenge  
+        if(updateUser){
 
-        let updatedUsers = [...users, inputData];
-+       setUsers(updatedUsers);  //1 step piche chal rhe the so at the time of setUsers, we storing data in local storage too
-        // setUsers((prev)=>[...prev, inputData])
-        localStorage.setItem("users", JSON.stringify(updatedUsers))
+            //update logic
+            setUsers((prev)=>{
+                //map - method jo array ko manupulate nahin karta, 
+                // array will be same just change the  
+                return prev.map((userObj)=>{
+                    //if the ID of existing userObj is same with current updateUser's ID
+                    //then update new-current inputData > will be updated by new ref obj at same place in array
+                    //if not same reutrn same userObj
+                    return userObj.id === updateUser.id ? {...inputData} : userObj; 
+                })
+
+            })
+
+        }else{
+            let updatedUsers = [...users, {...inputData, id: nanoid()}]; //to add unique id with obj of user
+            // let updatedUsers = [...users, inputData];
+            setUsers(updatedUsers);
+            localStorage.setItem("users", JSON.stringify(updatedUsers))
+        }
+        // let updatedUsers = [...users, inputData];
+        // setUsers(updatedUsers);  //1 step piche chal rhe the so at the time of setUsers, we storing data in local storage too
+        // // setUsers((prev)=>[...prev, inputData])
+        // localStorage.setItem("users", JSON.stringify(updatedUsers));
         reset(); 
         setToggle((prev)=>!prev);
     }

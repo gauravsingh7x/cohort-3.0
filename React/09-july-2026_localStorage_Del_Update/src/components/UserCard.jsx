@@ -1,10 +1,10 @@
 
 
-const UserCard = ({user, setToggle, deleteUser, id}) =>{
+const UserCard = ({user, setToggle, deleteUser, id, setUpdateUser}) =>{
 
     
     return (
-        <div className="p-5 flex flex-col items-center gap-5 bg-sky-300 h-80 w-60">
+        <div className="mt-5 ml-5 rounded-xl p-5 flex flex-col items-center gap-5 bg-sky-300 h-80 w-60">
             <div className="w-40 h-40 border flex items-center justify-center border-amber-300">
                 <img src={user.image} alt="Image"/>
             </div>
@@ -18,8 +18,10 @@ const UserCard = ({user, setToggle, deleteUser, id}) =>{
 
             <div className="flex gap-1">
                 <button onClick={()=>{
+                    setUpdateUser(user);
                     setToggle((prev)=>!prev)
                 }}
+
                 className="bg-purple-500 px-2 rounded-xl">Update</button>
      
                 <button 

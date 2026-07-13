@@ -23,6 +23,10 @@ const App = () => {
     // console.log(id);
   }
 
+  let [updateUser, setUpdateUser] = useState(null);
+  // console.log("App ne hu", updateUser);
+
+
 
   return (
     <div>
@@ -32,12 +36,18 @@ const App = () => {
 
 {
   toggle? <div className="flex flex-wrap gap-5">
-        {users.map((elem, idx)=>{
-          return <UserCard id={idx} deleteUser={deleteUser} idx={idx} key={idx} user={elem} key={idx} setToggle={setToggle}/>
+        {users.map((elem)=>{
+          return <UserCard 
+          updateUser={updateUser} 
+          setUpdateUser={setUpdateUser} 
+          deleteUser={deleteUser} 
+          key={elem.id} 
+          user={elem} 
+          setToggle={setToggle}/>
         })}
       </div> :
         <div className="flex justify-center items-center h-[70%]:">
-      <Form users={users} setUsers={setUsers} setToggle={setToggle}/>
+      <Form updateUser={updateUser} users={users} setUsers={setUsers} setToggle={setToggle}/>
     </div>
 }
     
