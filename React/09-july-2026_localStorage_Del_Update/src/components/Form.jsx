@@ -4,8 +4,6 @@ import { nanoid } from 'nanoid'
 const Form = ({setUsers, setToggle, users, updateUser}) => {
 
 
-    
-
     let {register, 
         handleSubmit, 
         reset, 
