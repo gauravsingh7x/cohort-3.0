@@ -1,6 +1,12 @@
-import React from 'react'
+import {React, useContext} from 'react'
+import { MyShop } from "../context/MyWebContext";
 
-const Navbar = ({setIsCartOpen}) => {
+// const Navbar = ({setIsCartOpen}) => {
+const Navbar = () => {
+
+    //get the below by destructuring obj, because we sent in a object from context MyShop
+    const {setIsCartOpen} = useContext(MyShop);
+
   return (
     <div className="p-4 bg-black h-10 text-white flex rounded items-center justify-between">
         <div>logo</div>

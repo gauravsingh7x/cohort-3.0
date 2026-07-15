@@ -5,7 +5,7 @@ export const MyStore = createContext();
 
 
 // make a provider of our store who keeps/handles data and serves to the customers
-export const ContextProvider = ({children}) => {
+export const MyStoreContextProvider = ({children}) => {
 
     const [contextData, setContextData] = useState("I'm from Context");
 

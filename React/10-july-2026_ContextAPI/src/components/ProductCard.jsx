@@ -1,6 +1,12 @@
 import { Star } from "lucide-react";
+import { useContext } from "react";
+import { MyShop } from "../context/MyWebContext";
 
-const ProductCard = ({ product, setCartItems }) => {
+// const ProductCard = ({ product, setCartItems }) => {
+const ProductCard = ({product}) => {
+
+  const {setCartItems} = useContext(MyShop);
+
   return (
     <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
       {/* Product Image */}
