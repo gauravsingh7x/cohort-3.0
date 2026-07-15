@@ -252,7 +252,9 @@ const App =()=> {
   ];
 
   let [isCartOpen, setIsCartOpen] = useState(true);
-  const [cartItems, setCartItems] =useState([]);
+
+  // move to MyContext
+  // const [cartItems, setCartItems] =useState([]);
   // console.log(cartItems);
 
 
