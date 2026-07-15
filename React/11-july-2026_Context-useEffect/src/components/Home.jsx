@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { use, useContext } from 'react'
+import { MyStore } from "../context/MyContext"
 
 const Home = () => {
 
-    console.log("Home Rendering..")
+  let {count, setCount} = useContext(MyStore);
+
+  let data = useContext(MyStore)
+  console.log("Home Rendering..->",data )
 
   return (
-    <div>Home</div>
+    <div>
+      <h1>Home - {count}</h1>
+      <button onClick={()=>{
+        setCount(count+1);
+      }}>Increment</button>
+
+    </div>
   )
 }
 

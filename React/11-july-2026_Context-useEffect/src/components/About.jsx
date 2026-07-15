@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { MyStore } from "../context/MyContext"
 
 const About = () => {
 
-    console.log("About Rendering..")
+    let data = useContext(MyStore);
+    console.log("About Rendering..->", data)
 
 
   return (
