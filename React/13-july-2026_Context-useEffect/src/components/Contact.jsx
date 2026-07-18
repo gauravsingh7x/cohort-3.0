@@ -4,7 +4,6 @@ const Contact = () => {
 
     console.log("Contact Rendering...")
 
-
   return (
     <div>Contact</div>
   )
